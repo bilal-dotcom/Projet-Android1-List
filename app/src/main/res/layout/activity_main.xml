@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/TxtBoxNom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="Nom" />
+
+    <EditText
+        android:id="@+id/TxtBoxPrix"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:hint="Prix"
+        android:inputType="number"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/TxtBoxNom"
+        android:text="Ajouter a la liste"
+        android:onClick="listClick"
+        />
+
+    <RadioGroup
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/TxtBoxNom"
+        android:layout_toRightOf="@+id/button1"
+        android:id="@+id/radiog">
+
+        <RadioButton
+            android:id="@+id/rdbfruit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtBoxNom"
+            android:layout_toRightOf="@+id/button1"
+            android:text="Fruits et legumes" />
+
+        <RadioButton
+            android:id="@+id/rdbviande"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtBoxNom"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/button1"
+            android:text="Viandes et substituts" />
+
+        <RadioButton
+            android:id="@+id/rdblaitier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtBoxNom"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/button1"
+            android:text="Produits laitiers" />
+
+        <RadioButton
+            android:id="@+id/rdbpatiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TxtBoxNom"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/button1"
+            android:text="Patisseries" />
+
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/listProd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button1"
+        android:layout_centerHorizontal="true" >
+
+    </ListView>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listProd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:text="Total panier" />
+
+    <TextView
+        android:id="@+id/lbltotal"
+        android:layout_marginLeft="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/textView1"
+        android:layout_below="@+id/listProd"
+        android:layout_alignParentBottom="true"
+        android:text="$$$" />
+
+
+</RelativeLayout>
